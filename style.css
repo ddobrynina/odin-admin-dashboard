@@ -1,8 +1,69 @@
 /*style.css*/
+:root{
+    --blue: #38BDF8;
+    --grey: #CBD5E1;
+    --orange: #f59e0b; 
+    --white: #f9fafb; 
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url('Roboto-Regular.ttf');
+}
 
 .container{
     display: grid;
     grid-template-columns: 1fr 4fr;
+    font-family: Roboto;
+}
+
+/*Sidebar*/
+
+.sidebar{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3fr 4fr;
+    background-color: var(--blue);
+    color: var(--white);
+    padding-left: 40px;
+    font-weight: bold;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.dash-icon{
+    height: 50px;
+    width: 50px;
+}
+
+.icons{
+    height: 30px;
+    width: 30px;
+}
+
+.sidebar > p, .nav-bar > p, .support > p{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: left;
+    align-items: center;
+    gap: 20px;
+}
+
+.sidebar > p{
+    font-size: 30px;
+}
+
+/*Header*/
+.header{
+    background-color: var(--white);
+}
+
+#searchBar{
+    background-color: var(--grey);
+    border-radius: 20px;
 }
 
 .header-top{
@@ -12,15 +73,62 @@
 
 .header-bottom{
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 3fr 100px 100px 100px 100px;
+    gap: 30px;
 }
 
+button{
+    background-color: var(--blue);
+    color: var(--white);
+    font-size: 15px;
+    border-radius: 20px;
+    height: 40px;
+    align-self: center;
+    border: none;
+    font-weight: bold;
+}
+
+
+/*Main Content*/
 .text{
     display: grid;
     grid-template-columns: 2fr 1fr;
+    background-color: var(--grey);
+    gap: 10px;
+    padding: 10px;
 }
 
 .projects{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.cards{
+    background-color: var(--white);
+    border-radius: 10px;
+    border-left-color: var(--orange);
+    border-left-width: 5px;
+    border-left-style: solid;
+    padding: 40px 30px 30px 20px;
+    display: grid;
+}
+.card-actions{
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+}
+.card-actions >img{
+    height: 40px;
+    width: 40px;
+    justify-self: flex-end;
+}
+
+.announcements{
+    background-color: var(--white);
+    border-radius: 10px;
+}
+
+.trending{
+    background-color: var(--white);
+    border-radius: 10px;
 }
